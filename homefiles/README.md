@@ -1,7 +1,7 @@
-i dotfiles Task 2 - bashrc
+# dotfiles Task 2 - bashrc
 ## Term Definitions
- - `.bashrc`: is a shell script file that executes every time a new Bash session is initiated/user logs onto the system's terminal. Is used to set up the user's shell environment according to their preferences by allowing them to define aliases, functions, environment variables, and executing commands within the .bashrc file. 
- - `alias`: is a user-defined shortcut for a longer command or sequence of commands. Instructs the shell to replace one string with another string while executing the commands.
+ - **.bashrc:** is a shell script file that executes every time a new Bash session is initiated/user logs onto the system's terminal. Is used to set up the user's shell environment according to their preferences by allowing them to define aliases, functions, environment variables, and executing commands within the .bashrc file. 
+ - **Alias:** is a user-defined shortcut for a longer command or sequence of commands. Instructs the shell to replace one string with another string while executing the commands.
 
 ## How to create aliases
 There are two methods to create aliases, which are listed below. I used the first method on this assignment.
@@ -16,25 +16,25 @@ There are two methods to create aliases, which are listed below. I used the firs
  2. Create a Separate Aliases File
      1. Open the `.bashrc` file for editing using this command `cd ~/.bashrc | vim .bashrc`
      2. Copy and paste the text below into the `.bashrc` file, then save and exit the file
-         -```
+          ```
           if [ -f ~/.bash_aliases ]; then
             . ~/.bash_aliases
           fi
           ```
-     3. Create the `.bash_aliases` file by using the command `cd ~ | touch .bash_aliases`
-     4. Open the file for editing to add aliases to using this command `vim .bash_aliases`, then save and exit the file
+     4. Create the `.bash_aliases` file by using the command `cd ~ | touch .bash_aliases`
+     5. Open the file for editing to add aliases to using this command `vim .bash_aliases`, then save and exit the file
  
 ## Aliases Guide
 Lists the aliases I added to the `.bashrc` file in my AWS host system and what they do
 
 Aliases Created:
- - `alias today='date +"%m-%d-%Y"'` shows the current day's month, date, and year
- - `alias path='echo -e ${PATH//:/\\n}'` neatly lists all the directories within the PATH variable that the shell searches through for executable files
- - `alias root='sudo -i'` switches the current user to root
- - `alias gitlg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"` shows a repositories log data, such as a commit's ID and message, how long ago a commit was made, and the user how made the commit, neatly displayed in a list/graph format
- - `alias web='cd /var/www/html'` changes directories to the /var/www/html directory where website files are stored
- - `alias reboot='sudo shutdown -r now'` safely reboots the system the user is on
- - `alias update='sudo apt update'` downloads/updates package information from all configured sources
+ - `alias today='date +"%m-%d-%Y"'`- Shows the current day's month, date, and year
+ - `alias path='echo -e ${PATH//:/\\n}'`- Neatly lists all the directories within the PATH variable that the shell searches through for executable files
+ - `alias root='sudo -i'`- Switches the current user to root
+ - `alias gitlg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"`- Shows a repositories log data, such as a commit's ID and message, how long ago a commit was made, and the user how made the commit, neatly displayed in a list/graph format
+ - `alias web='cd /var/www/html'`- Changes directories to the /var/www/html directory where website files are stored
+ - `alias reboot='sudo shutdown -r now'`- Safely reboots the system the user is on
+ - `alias update='sudo apt update'`- Downloads/updates package information from all configured sources
 
 ## Script Guide
 
