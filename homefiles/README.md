@@ -25,6 +25,9 @@ There are two methods to create aliases, which are listed below. I used the firs
           ```
      3. Create the `.bash_aliases` file by using this command: `touch .bash_aliases`
      4. Open the file for editing to add aliases to using this command `vim .bash_aliases`, then save and exit the file
+     5. Reload or reboot the system using either of the methods below:
+         - Exit the host/local system and log back in
+         - Use the command `. ~/.bashrc`
  
 ## Aliases Guide
 Lists the aliases I added to the `.bashrc` file in my AWS host system and what they do
