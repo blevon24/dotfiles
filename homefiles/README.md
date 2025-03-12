@@ -7,7 +7,7 @@
 There are two methods to create aliases, which are listed below. I used the first method on this assignment.
 
  1. Edit `.bashrc` file directly
-     1. Change directories to the `.bashrc` file using this command `cd ~/.bashrc`
+     1. Change directories to the home directory where the `.bashrc` file is located using this command `cd ~`
      2. Open the file for editing to add aliases to using this command `vim .bashrc`
      3. Reload or reboot the system using either of the methods below:
          - Exit the host/local system and log back in
@@ -15,7 +15,7 @@ There are two methods to create aliases, which are listed below. I used the firs
 
  2. Create a Separate Aliases File
      1. Open the `.bashrc` file for editing using the two commands below:
-         - `cd ~/.bashrc`- Changes directories to `~/.bashrc`
+         - `cd ~`- Changes directories to home directory
          - `vim .bashrc`- Opens the `.bashrc` file for editing
      3. Copy and paste the text below into the `.bashrc` file, then save and exit the file
           ```
