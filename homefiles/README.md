@@ -23,9 +23,7 @@ There are two methods to create aliases, which are listed below. I used the firs
             . ~/.bash_aliases
           fi
           ```
-     3. Create the `.bash_aliases` file by using the two commands below:
-         - `cd ~ `- Changes directories to the home directory
-         - `touch .bash_aliases`- Creates a hidden file named '.bash_aliases'
+     3. Create the `.bash_aliases` file by using this command: `touch .bash_aliases`
      4. Open the file for editing to add aliases to using this command `vim .bash_aliases`, then save and exit the file
  
 ## Aliases Guide
