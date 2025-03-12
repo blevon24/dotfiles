@@ -17,16 +17,16 @@ There are two methods to create aliases, which are listed below. I used the firs
      1. Open the `.bashrc` file for editing using the two commands below:
          - `cd ~`- Changes directories to home directory
          - `vim .bashrc`- Opens the `.bashrc` file for editing
-     3. Copy and paste the text below into the `.bashrc` file, then save and exit the file
+     2. Copy and paste the text below into the `.bashrc` file if it doesn't already exist in the file, then save and exit the file
           ```
           if [ -f ~/.bash_aliases ]; then
             . ~/.bash_aliases
           fi
           ```
-     4. Create the `.bash_aliases` file by using the two commands below:
+     3. Create the `.bash_aliases` file by using the two commands below:
          - `cd ~ `- Changes directories to the home directory
          - `touch .bash_aliases`- Creates a hidden file named '.bash_aliases'
-     6. Open the file for editing to add aliases to using this command `vim .bash_aliases`, then save and exit the file
+     4. Open the file for editing to add aliases to using this command `vim .bash_aliases`, then save and exit the file
  
 ## Aliases Guide
 Lists the aliases I added to the `.bashrc` file in my AWS host system and what they do
