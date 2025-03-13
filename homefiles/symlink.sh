@@ -19,6 +19,7 @@ while $loop; do
 			echo "Symbolically linking your .bashrc files"
 			ln -s [$targetFile] [$symlink]
 			echo "Symlink Completed"
+			echo "NOTE!! Don't forget to reload your shell environment by logging out and back in!"
 			echo -e "Exiting program\n"
 			loop=false
 		fi
