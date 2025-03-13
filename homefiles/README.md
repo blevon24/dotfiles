@@ -41,9 +41,6 @@ Aliases Created:
  - `alias reboot='sudo shutdown -r now'`- Safely reboots the system the user is on
  - `alias update='sudo apt update'`- Downloads/updates package information from all configured sources
 
-## Script Guide
-
-
 ## References
  - Source: Ask Ubuntu
    - Link: https://askubuntu.com/questions/17536/how-do-i-create-a-permanent-bash-alias
@@ -64,6 +61,27 @@ Aliases Created:
  - Source: Medium.com
    - Link: https://medium.com/towards-data-engineering/understanding-the-path-variable-in-linux-2e4bcbe47bf5
    - Used for: I used this website to figure out what one of the aliases I added does to the PATH variable
+
+ - Source: phoenixNAP
+   - Link: https://phoenixnap.com/kb/symbolic-link-linux
+   - Used for: I used this website to figure out how to create a symbolic link
+
+ - Source: Linuxize
+   - Link: https://linuxize.com/post/bash-if-else-statement/
+   - Used for: I used this website to remember how to create an if else statement in bash script
+
+ - Source: KodeKloud
+   - Link: https://kodekloud.com/blog/declare-bash-boolean-variable-in-shell-script/
+   - Used for: I used this website to figure out how to declare bash boolean variables in a shell script since bash doesn't have a native boolean data type
+
+ - Source: Stack Overflow
+   - Link: https://stackoverflow.com/questions/5767062/how-to-check-if-a-symlink-exists
+   - Link: https://stackoverflow.com/questions/8467424/echo-newline-in-bash-prints-literal-n
+   - Used for: I used this website to figure out how to check if a symbolic link between the two .bashrc files was already created and how to create new lines while useing the echo command
+
+ - Source: Server Fault
+   - Link: https://serverfault.com/questions/76042/find-out-symbolic-link-target-via-command-line
+   - Used for: I used this website to find commands to check if a file is symbolically linked and if so where it is linked
 
  - Source:
    - Link:
