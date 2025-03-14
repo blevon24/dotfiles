@@ -9,7 +9,7 @@ while $loop; do
 	read -r confirm
 	
 	if [[ $confirm == "y" || $confirm == "Y" ]]; then
-		linkCheck=$(readlink -f "$targetFile")
+		linkCheck=$(readlink -f "$symlink")
 
 		if [ -L ${symlink} ]; then
 			echo "'${symlink}' is already symbolically linked to '${linkCheck}'"
