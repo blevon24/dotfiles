@@ -7,9 +7,9 @@
 ## File Descriptions
 
 ## References
- - Source: 
-   - Link: 
-   - Used for:
+ - Source: Stack Overflow
+   - Link: https://stackoverflow.com/questions/18215973/how-to-check-if-running-as-root-in-a-bash-script
+   - Used for: I used this website to figure out how to check if the shell program is run by the root user or sudo.
 
  - Source:
    - Link:
