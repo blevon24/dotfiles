@@ -24,16 +24,16 @@ while $loop; do
 	fi
 
 	# Provides installation information and prompts for confirmation
-	echo -e "The software this program installs onto your system is called Singularity\n"
-	echo -e "Singularity is a container platform that allows users to create and run containers that package up pieces of software in a way that is portable and reproducible. You can build a container using Singularity on your laptop, and then run it anywhere.\n"
+	echo -e "The software this program installs onto your system is called Anaconda\n"
+	echo -e "Anaconda is an open-source distribution of the Python and R programming languages for data science that aims to simplify package management and deployment. Package versions in Anaconda are managed by the package management system, conda, which analyzes the current environment before executing an installation to avoid disrupting other frameworks and packages.\n"
 	printf "Would you like to download this software onto you system? (y/n) "
 	read -r confirm
 
 	# Checks if software already exists on the terminal or if the name already exists and silently installs software
 	if [[ $confirm == "y" || $confirm == "Y" ]]; then
-		if dpkg -l | grep -qw singularity-container || command -v singularity-container &>/dev/null; then
+		if dpkg -l | grep -qw anaconda || command -v conda &>/dev/null; then
 			echo "A name conflict has occurred"
-			echo "Either the Singularity software or name exists on your system"
+			echo "Either the Anaconda software or name exists on your system"
 			echo -e "Exiting program\n"
 			exit
 
@@ -42,13 +42,15 @@ while $loop; do
 
 		fi
 
-		wget -O- http://neuro.debian.net/lists/jammy.us-tn.full | sudo tee /etc/apt/sources.list.d/neurodebian.sources.list
+		sudo apt-get update -y &>/dev/null
 
-		sudo apt-key adv --recv-keys --keyserver hkps://keyserver.ubuntu.com 0xA5D32F012649A5A9
+		cd /tmp | sudo apt-get install -y wget &>/dev/null
 
-		sudo apt-get update -y
+		wget https://repo.anaconda.com/archive/Anaconda3-2022.05-Linux-x86_64.sh &>/dev/null
 
-		sudo apt-get install -y singularity-container
+		sha256sum Anaconda3-2022.05-Linux-x86_64.sh &>/dev/null
+
+		bash Anaconda3-2022.05-Linux-x86_64.sh
 
 	elif [[ $confirm == "n" || $confirm == "N" ]]
 	then
@@ -62,9 +64,9 @@ while $loop; do
 	fi
 
 	# Checks if software was properly installed
-	if dpkg -l | grep -qw singularity-container || command -v singularity-container &>/dev/null; then
+	if dpkg -l | grep -qw anaconda || command -v conda &>/dev/null; then
 		echo "The installation process is completed"
-		echo "Try the command `sudo singularity build --sandbox [container name] [filename]` to run the Singularity software"
+		echo "Try the command `source ~/.bashrc and conda info` to acctivate the added environment settings to test if the software runs"
 		echo -e "Exiting program\n"
 		loop=false
 	else
