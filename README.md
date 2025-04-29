@@ -1,20 +1,18 @@
-#Task 4 - Polish & Documentation
+# Task 4 - Polish & Documentation
 ## Description
 This is my personal repository that customizes my local system's Linux environment. This repository contains all my customized dotfiles with scripts that automates the installation of my personal dotfiles and additional programs onto any user's Linux operating system.
 
 ## Repository's Contents
 | Directories	| Directory's Files 	|
 | :------------ | :-------------------- |
-| vim-config	| - README.md
-		  - vimscript.sh
-		  - .vimrc
-| homefiles	|
-| sys-installs	|
+| vim-config	| <ul><li>README.md</li><li>vimscript.sh</li><li>.vimrc</li> |
+| homefiles	| <ul><li>README.md</li><li>symlink.sh</li><li>.bashrc</li> |
+| sys-installs	| <ul><li>README.md</li><li>installation.sh</li> |
 
- - README.md Files: contains information 
+ - README.md Files: contains information about the dotfiles themselves, added customizations, software used, how to run the bash scripts, and references.
  - Dotfiles:
-   - **.vimrc:** is the configuration file for vim that contains customized plugins for my local system
-   - **.bashrc:** is 
+   - **.vimrc:** is the configuration file for vim that contains customized plugins for the vim program on my local system.
+   - **.bashrc:** is the configuration file for the Bash shell that contains regular and customized commands, functions, aliases, and scripts that execute every time a Bash session is started in Linux or Mac.
  - Bash Script Files:
    - **vimscript.sh:** usage guide for the script is listed in the `vim-config` directory's README.md file.
    - **symlink.sh:** usage guide for the script is listed in the `homefiles` directory's README.md file.
@@ -45,9 +43,11 @@ To utilize my customized `.bashrc` file located within this repository follow th
  3. Lastly, run the `symlink.sh` file to symbolically this repository's file to your home directory's `.bashrc` file to automatically add the files customizations to your system.
 
 ## Current Issues & Fixes
-| Issues	| First Occured 	| Fixed?	| Implementation Date	|
+| Git Issues	| Created 	| Fixed?	| Date of Patched Issue	|
 | :------------ | :-------------------: | :-----------: | :-------------------: |
-| 
+| Remove or fix invalid plugins in `.vimrc` file | April 28, 2025 | Yes | April 28, 2025 |
+| Create a README.md for vimscript.sh | April 28, 2025 | Yes | April 28, 2025 |
+
 
 ## Future Goals/Improvements
  - Customize more dotfiles for linux such as: .bash_profile, .ssh/config, .gitconfig, .tmux.conf, & .gitignore
