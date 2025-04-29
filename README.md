@@ -1,11 +1,13 @@
 #Task 4 - Polish & Documentation
 ## Description
-This is my personal repository containing all my customized dotfiles with scripts that automate
+This is my personal repository that customizes my local system's Linux environment. This repository contains all my customized dotfiles with scripts that automates the installation of my personal dotfiles and additional programs onto any user's Linux operating system.
 
-## Repo Contents
-| Directories	| Purpose 	| Directory's Files 	|
-| :------------ | :------------ | :-------------------- |
-| vim-config	|
+## Repository's Contents
+| Directories	| Directory's Files 	|
+| :------------ | :-------------------- |
+| vim-config	| - README.md
+		  - vimscript.sh
+		  - .vimrc
 | homefiles	|
 | sys-installs	|
 
@@ -18,7 +20,7 @@ This is my personal repository containing all my customized dotfiles with script
    - **symlink.sh:** usage guide for the script is listed in the `homefiles` directory's README.md file.
    - **installation.sh:** usage guide for the script is listed in the `sys-installs` directory's README.md file.
 
-## How to Install
+## Repository & Dotfile Installation
 ### How to Git Clone the Repository
 Use the command below to git clone with HTTPS:
 ```
@@ -28,12 +30,24 @@ git clone https://github.com/blevon24/dotfiles.git
 Use the command below to git clone with SSH:
 ```
 git clone git@github.com:blevon24/dotfiles.git
-``` 
+```
+
+### How to Utilize the `.vimrc` File
+To utilize my customized `.vimrc` file located within this repository follow the steps below:
+ 1. Ensure you've git cloned this repository to your local system.
+ 2. Visit the `vim-config` directory and read its README.md file to view the `.vimrc` customizations, such as plugins, and the usage guide for the `vimscript.sh` script file.
+ 3. Lastly, run the `vimscript.sh` file to create a copy of this repo's `.vimrc` file to your home directory, install Vundle, and automatically implement the `.vimrc` file's customizations.
+
+### How to Utilize the `.bashrc` File
+To utilize my customized `.bashrc` file located within this repository follow the steps below:
+ 1. Ensure you've git cloned this repository to your local system.
+ 2. Visit the `homefiles` directory and read its README.md file to view the `.bashrc` customizations, such as aliases, and the usage guide for the `symlink.sh` script file.
+ 3. Lastly, run the `symlink.sh` file to symbolically this repository's file to your home directory's `.bashrc` file to automatically add the files customizations to your system.
 
 ## Current Issues & Fixes
 | Issues	| First Occured 	| Fixed?	| Implementation Date	|
 | :------------ | :-------------------: | :-----------: | :-------------------: |
-|
+| 
 
 ## Future Goals/Improvements
  - Customize more dotfiles for linux such as: .bash_profile, .ssh/config, .gitconfig, .tmux.conf, & .gitignore
