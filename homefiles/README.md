@@ -105,3 +105,6 @@ Aliases Created:
    - Link: https://serverfault.com/questions/76042/find-out-symbolic-link-target-via-command-line
    - Used for: I used this website to find commands to check if a file is symbolically linked and if so where it is linked 
 
+ - Source: nixCraft
+   - Link: https://www.cyberciti.biz/faq/bash-check-if-file-does-not-exist-linux-unix/
+   - Used for: I used this website to find out how to chekc if a file exists via a bash script
