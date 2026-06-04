@@ -31,7 +31,7 @@ There are two methods to create aliases, which are listed below. I used the firs
          - Use the command `. ~/.bashrc`
  
 ## Aliases Guide
-Lists the aliases I added to the `.bashrc` file in my AWS host system and what they do
+Lists the aliases I added to the `.bashrc` and `.bash_aliases` files in my AWS host system and what they do
 
 Aliases Created:
  - `alias today='date +"%m-%d-%Y"'`- Shows the current day's month, date, and year
@@ -41,6 +41,8 @@ Aliases Created:
  - `alias web='cd /var/www/html'`- Changes directories to the /var/www/html directory where website files are stored
  - `alias reboot='sudo shutdown -r now'`- Safely reboots the system the user is on
  - `alias update='sudo apt update'`- Downloads/updates package information from all configured sources
+ - `alias upgrade='sudo apt upgrade'`- Downloads/upgrades the newest versions of all packages currently installed
+ - `alias itch.in='flatpak run io.itch.itch'`- Runs Itch.io application via Flatpak
 
 ## References
  - Source: Ask Ubuntu
