@@ -42,7 +42,26 @@ Aliases Created:
  - `alias web='cd /var/www/html'`- Changes directories to the /var/www/html directory where website files are stored
  - `alias reboot='sudo shutdown -r now'`- Safely reboots the system the user is on
  - `alias update='sudo apt update && sudo apt upgrade'`- Downloads/updates package information from all configured sources & upgrades packages currently installed to their newest versions
+ - `alias l.='ls -d .* --color=auto'` - Displays and highlights hidden files within the current directory
+ - `alias ..='cd ..'` - Moves to the parent directory of the current directory
+ - `alias ...='cd ../../../'` - Moves up three directories of the current directory
+ - `alias ....='cd ../../../../'` - Moves up four directories of the current directory
+ - `alias .....='cd ../../../../..'` - Moves up five directories of the current directory
+ - `alias diff='colordiff'` - Colorizes the diff output when you compare files using diff
+ - `alias h='history'` - Displays the users command-line history
+ - `alias psmem='ps auxf | sort -nr -k 4'` - Displays the processes running that are eating up memory
+ - `alias pscpu='ps auxf | sort -nr -k 3'` - Displays the processes running that are eating the CPU
+ - `alias cpuinfo='lscpu'` - Displays the CPU architecture info
+ - `alias rm='rm -r'` - Allows the user to remove files/directories recursively and doesn't prevent the user from removing a file/directory
+ - `alias mv='mv -i'` - Prompts for confirmation to move a file
+ - `alias cp='cp -r'` - Allows the user to copy a file/directory recursively and doesn't prevent the user from copying a file/directory
+ - `alias ln='ln -i'` - Prompts for confirmation to create a link between files
+ - `alias weather='curl wttr.in/cleveland'` - Shows the current weather in Cleveland (can change the city to another location)
+ - `alias define='sdcv' - Displays the definition of a word when command is followed by a word
+ - `alias wifipass='nmcli dev wifi show-password'` - Outputs the wifi password for the network the device is on and displays a QR code of the password
+ - `alias ddg='w3m lite.duckduckgo.com'` - Displays the light version of DuckDuckGo in the terminal for quick web searches
  - `alias itch.in='flatpak run io.itch.itch'`- Runs Itch.io application via Flatpak
+
 
 ## References
  - Source: Ask Ubuntu
