@@ -124,5 +124,6 @@ alias gitlg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Crese
 alias web='cd /var/www/html'
 alias reboot='sudo shutdown -r now'
 alias update='sudo apt update'
+alias upgrade='sudo apt upgrade'
 alias d='docker $*'
 alias d-c='docker-compose $*'
