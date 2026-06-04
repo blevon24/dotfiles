@@ -1,6 +1,7 @@
 # dotfiles Task 2 - bashrc
 ## Term Definitions
- - **.bashrc:** is a shell script file that executes every time a new Bash session is initiated/user logs onto the system's terminal. Is used to set up the user's shell environment according to their preferences by allowing them to define aliases, functions, environment variables, and executing commands within the .bashrc file. 
+ - **.bashrc:** is a shell script file that executes every time a new Bash session is initiated/user logs onto the system's terminal. Is used to set up the user's shell environment according to their preferences by allowing them to define aliases, functions, environment variables, and executing commands within the .bashrc file.
+ - **.bash_aliases:** is a text file that groups all your aliases together in a easy to read format rather than adding them into .bashrc along with its other parameters. In other words, makes it easier for users to manage their aliases.
  - **Alias:** is a user-defined shortcut for a longer command or sequence of commands. Instructs the shell to replace one string with another string while executing the commands.
  - **Symbolic Link:** is a file that stores a path to an existing file or directory on any local or external volume.
 
@@ -40,8 +41,7 @@ Aliases Created:
  - `alias gitlg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"`- Shows a repositories log data, such as a commit's ID and message, how long ago a commit was made, and the user how made the commit, neatly displayed in a list/graph format
  - `alias web='cd /var/www/html'`- Changes directories to the /var/www/html directory where website files are stored
  - `alias reboot='sudo shutdown -r now'`- Safely reboots the system the user is on
- - `alias update='sudo apt update'`- Downloads/updates package information from all configured sources
- - `alias upgrade='sudo apt upgrade'`- Downloads/upgrades the newest versions of all packages currently installed
+ - `alias update='sudo apt update && sudo apt upgrade'`- Downloads/updates package information from all configured sources & upgrades packages currently installed to their newest versions
  - `alias itch.in='flatpak run io.itch.itch'`- Runs Itch.io application via Flatpak
 
 ## References
@@ -84,5 +84,5 @@ Aliases Created:
 
  - Source: Server Fault
    - Link: https://serverfault.com/questions/76042/find-out-symbolic-link-target-via-command-line
-   - Used for: I used this website to find commands to check if a file is symbolically linked and if so where it is linked
+   - Used for: I used this website to find commands to check if a file is symbolically linked and if so where it is linked 
 
