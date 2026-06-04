@@ -1,4 +1,4 @@
-# dotfiles Task 2 - bashrc
+# dotfiles Task 2 - bashrc & bash_aliases
 ## Term Definitions
  - **.bashrc:** is a shell script file that executes every time a new Bash session is initiated/user logs onto the system's terminal. Is used to set up the user's shell environment according to their preferences by allowing them to define aliases, functions, environment variables, and executing commands within the .bashrc file.
  - **.bash_aliases:** is a text file that groups all your aliases together in a easy to read format rather than adding them into .bashrc along with its other parameters. In other words, makes it easier for users to manage their aliases.
@@ -62,6 +62,32 @@ Aliases Created:
  - `alias ddg='w3m lite.duckduckgo.com'` - Displays the light version of DuckDuckGo in the terminal for quick web searches
  - `alias itch.in='flatpak run io.itch.itch'`- Runs Itch.io application via Flatpak
 
+## Script File Description
+The Bash Script file `symlink.sh` automatically creates symlinks between the *.bashrc* and *.bash_aliases* files in this Git repo folder and their counterpart files in the user's home directory. 
+
+Full Description:
+ - In other words, this script symlinks the two dotfiles here, *.bashrc* & *.bash_aliases*, to their counterpart dotfiles in the user's home directory. This makes it easier for the user to manage their aliases by allowing changes to be automatically applied by just editing the two dotfiles within this folder once this repo is git cloned onto the user's local system and the symlink.sh script is ran. However, if you are not the owner of this git repo then I'd recommend you copy this GitHub repo and make your own version of it within GitHub to modify it. This ensures you have your own personalized dotfiles you can always have access to via GitHub and apply to any Linux system you decide. 
+
+How It Works:
+ 1. The script prompts the user
+     - If the user answers 'y', the script checks if the dotfiles .bashrc and user's home directory .bashrc files are already 
+ 2. The script
+
+ 1. The script checks the EUID of the user to verify the if the user is not the root user or not running the sudo command with the bash script in the command line using the command `"$EUID" -ne 0` 
+     - If the user isn't root or running sudo, the script prints out to the user "To run this script you must be the root user or use sudo" and then exits the program
+     - If the user is root or running with sudo, the script prints out "You are root!" and continues running
+ 2. The script checks if the package manager 'apt' is on the user's system using the command `command -v apt &>/dev/null`
+     - If the apt package manager is available on the system the script prints out "The apt package manager is available on this system" and continues running
+     - If the apt package manager is not available on the system the script prints out to the user "The system doesn't have the apt package manager available. This program requires the use of the apt package manager." and then exits the program.
+ 3. The script prints out to the user what software the script program installs, what is does, and confirms in a yes or no question if the user would like to download the software onto their system.
+     - If the user types 'y' or 'Y', the script checks if the Anaconda name or software is already installed on the system using the command `dpkg -l | grep -qw anaconda || command -v conda &>/dev/null`
+         - If the software is already installed the script prints out "A name conflict has occurred. Either the Anaconda software or name exists on your system already" and then exits the program
+         - If the software or name doesn't exist on the system the script prints out "No conflict of interest for installation process" and then silently installs the software onto the system
+     - If the user types 'n' or 'N', the script prints out "Exiting program" and then exits the program
+     - If the user types neither of the two options above, the script prints out "Invalid input. Answer either needs to be 'y' or 'n'" and then exits the program
+ 4. Lastly, the program checks if the software was properly installed using the command `dpkg -l | grep -qw anaconda || command -v conda &>/dev/null` to see if the software or software name is located on the current system
+     - If the software or name is on the system the script prints out "The installation process is completed. Try the command `source ~/.bashrc and conda info` to activate the added environment settings to test if the software runs" and then exits the program
+     - If the software isn't located/properly installed on the system then the script prints out "There was an error in the installation process" and exits the program
 
 ## References
  - Source: Ask Ubuntu
