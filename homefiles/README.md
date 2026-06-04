@@ -69,25 +69,18 @@ Full Description:
  - In other words, this script symlinks the two dotfiles here, *.bashrc* & *.bash_aliases*, to their counterpart dotfiles in the user's home directory. This makes it easier for the user to manage their aliases by allowing changes to be automatically applied by just editing the two dotfiles within this folder once this repo is git cloned onto the user's local system and the symlink.sh script is ran. However, if you are not the owner of this git repo then I'd recommend you copy this GitHub repo and make your own version of it within GitHub to modify it. This ensures you have your own personalized dotfiles you can always have access to via GitHub and apply to any Linux system you decide. 
 
 How It Works:
- 1. The script prompts the user
-     - If the user answers 'y', the script checks if the dotfiles .bashrc and user's home directory .bashrc files are already 
- 2. The script
-
- 1. The script checks the EUID of the user to verify the if the user is not the root user or not running the sudo command with the bash script in the command line using the command `"$EUID" -ne 0` 
-     - If the user isn't root or running sudo, the script prints out to the user "To run this script you must be the root user or use sudo" and then exits the program
-     - If the user is root or running with sudo, the script prints out "You are root!" and continues running
- 2. The script checks if the package manager 'apt' is on the user's system using the command `command -v apt &>/dev/null`
-     - If the apt package manager is available on the system the script prints out "The apt package manager is available on this system" and continues running
-     - If the apt package manager is not available on the system the script prints out to the user "The system doesn't have the apt package manager available. This program requires the use of the apt package manager." and then exits the program.
- 3. The script prints out to the user what software the script program installs, what is does, and confirms in a yes or no question if the user would like to download the software onto their system.
-     - If the user types 'y' or 'Y', the script checks if the Anaconda name or software is already installed on the system using the command `dpkg -l | grep -qw anaconda || command -v conda &>/dev/null`
-         - If the software is already installed the script prints out "A name conflict has occurred. Either the Anaconda software or name exists on your system already" and then exits the program
-         - If the software or name doesn't exist on the system the script prints out "No conflict of interest for installation process" and then silently installs the software onto the system
-     - If the user types 'n' or 'N', the script prints out "Exiting program" and then exits the program
-     - If the user types neither of the two options above, the script prints out "Invalid input. Answer either needs to be 'y' or 'n'" and then exits the program
- 4. Lastly, the program checks if the software was properly installed using the command `dpkg -l | grep -qw anaconda || command -v conda &>/dev/null` to see if the software or software name is located on the current system
-     - If the software or name is on the system the script prints out "The installation process is completed. Try the command `source ~/.bashrc and conda info` to activate the added environment settings to test if the software runs" and then exits the program
-     - If the software isn't located/properly installed on the system then the script prints out "There was an error in the installation process" and exits the program
+ 1. The script prompts the user if they want to symlink the .bashrc file in homefiles to their home directory and saves their answer as a variable
+ 2. If the user answers 'y', the script checks if the homefiles .bashrc and the user's home directory .bashrc files are already symbolically linked
+     - The script will exit the program if a symlink already exists between the .bashrc files
+     - If a symlink does not exist the script will create a symlink and prompt the user to reload their shell environment to allow the changes to be applied to the system
+ 3. If the user answers 'n', the script prompts the user if they want to symlink the .bash_aliases file in homefiles to their home directory and saves their answer as a variable
+     - If the user answers 'y', the script will first check if a .bash_aliases file already exists in the user's home directory in order to prevent the script from creating a broken/dangling symlink
+       - The script will create a .bash_aliases file within the user's home directory and exit the program if the file doesn't exist
+       - Otherwise, the script will check if the homefiles .bash_aliases and the user's home directory .bash_aliases files are already symbolically linked
+       - If the .bash_aliases files are already symbolically linked, the script will exit the program
+       - If a symlink does not exist, the script will create a symlink and prompt the user to reload their shell environment to allow the changes to be applied to the system
+     - If the user answers 'n', the script will exit the program
+ 4. The script is built with a safety net in mind so if the user mistypes or doesn't answer with 'y' or 'n', then the script will prompt them again with either of the questions above (1 and 3) to allow the user to answer correctly rather than exit the program and force the user to run it again.
 
 ## References
  - Source: Ask Ubuntu
