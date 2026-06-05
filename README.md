@@ -58,7 +58,7 @@ To utilize my customized `.bashrc` file located within this repository, follow t
  - Create bash scripts to install or symlink customized dotfiles from this repository automatically
  - Add customized dotfiles to install on Windows operating systems such as: .\components.ps1, .\functions.ps1, and .\aliases.ps1
 
-## Additional Information about Dotfiles 
+## Additional Information about Dotfiles & Sources used to build the `installEverything.sh` Bash Script
  - Source: freeCodeCamp
    - Link: https://www.freecodecamp.org/news/dotfiles-what-is-a-dot-file-and-how-to-create-it-in-mac-and-linux/
    - Desc: An article explaining what dotfiles are, their importance, and how to create them on Mac and Linux operating systems.
@@ -75,3 +75,6 @@ To utilize my customized `.bashrc` file located within this repository, follow t
    - Link: https://github.com/jayharris/dotfiles-windows
    - Desc: A GitHub repo containing a collection of PowerShell dotfiles or customizable files for Windows operating systems
 
+ - Source: Stack Overflow
+   - Link: https://stackoverflow.com/questions/48943687/how-to-run-2-or-more-scripts-from-different-directory-in-parallel
+   - Desc: I used this website, to figure out how to run multiple scripts located in the same or different directories within one master bash script file
