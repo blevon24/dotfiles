@@ -57,7 +57,15 @@ How It Works:
  - Source: ArchWiki
    - Link: https://wiki.archlinux.org/title/Cmus
    - Used for: I used this website to understand what features cmus has and how to use them such as remote controlling cmus via an external application or key-binding
-     
+  
+ - Source: 
+   - Link: 
+   - Used for:
+  
+ - Source: 
+   - Link: 
+   - Used for:
+  
  - Source: 
    - Link: 
    - Used for: 
