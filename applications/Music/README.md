@@ -58,13 +58,13 @@ How It Works:
    - Link: https://wiki.archlinux.org/title/Cmus
    - Used for: I used this website to understand what features cmus has and how to use them such as remote controlling cmus via an external application or key-binding
   
- - Source: 
-   - Link: 
-   - Used for:
+ - Source: Keno Kivabe
+   - Link: https://blogs.kenokivabe.com/article/create-interactive-menus-in-bash
+   - Used for: I used this website to figure out different way to create a menu within a bash script
   
- - Source: 
-   - Link: 
-   - Used for:
+ - Source: Stack Overflow
+   - Link: https://stackoverflow.com/questions/11636840/changing-to-root-user-inside-shell-script
+   - Used for: I used this website to figure out how to automatically run a program as root or using sudo when the user isn't root/using sudo when calling the script file
   
  - Source: 
    - Link: 
