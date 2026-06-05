@@ -45,3 +45,18 @@ To utilize my customized `.bashrc` file located within this repository, follow t
  1. Ensure you've git cloned this repository to your local system.
  2. Visit the `homefiles` directory and read its README.md file to view the `.bashrc` and `.bash_aliases` customizations, such as aliases, and the usage guide for the `symlink.sh` script file.
  3. Lastly, run the `symlink.sh` file to symbolically link this repository's files to your home directory's `.bashrc` and `.bash_aliases` files, automatically adding the files customizations to your system.
+
+# BELOW HERE DON'T TOUCH
+
+## References
+ - Source: Ask Ubuntu
+   - Link: https://askubuntu.com/questions/519/how-do-i-write-a-shell-script-to-install-a-list-of-applications
+   - Used for: I used this website, to understand how to set the environment to report an error and exit itself without a function needing to be created. Additionally, I used this source to understand how to have bash script install a list of pre-requisistes/applications.
+
+ - Source: Baeldung
+   - Link: https://www.baeldung.com/linux/script-install-many-applications
+   - Used for: I used this website, to understand how to install multiple applications in various ways like a text file
+  
+ - Source: 
+   - Link: 
+   - Used for:
