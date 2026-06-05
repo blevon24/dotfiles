@@ -1,4 +1,4 @@
-# dotfiles Task 2 - bashrc & bash_aliases
+# Task 5 - Application/Package Installation
 ## Term Definitions
  - **.bashrc:** is a shell script file that executes every time a new Bash session is initiated/user logs onto the system's terminal. Is used to set up the user's shell environment according to their preferences by allowing them to define aliases, functions, environment variables, and executing commands within the .bashrc file.
  - **.bash_aliases:** is a text file that groups all your aliases together in a easy to read format rather than adding them into .bashrc along with its other parameters. In other words, makes it easier for users to manage their aliases.
