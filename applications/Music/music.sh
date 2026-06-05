@@ -8,7 +8,32 @@ menu() {
   echo "3) Quit (exits the program)"
 }
 
+initCheck() {
+	if [ "$EUID" -ne 0 ]; then
+		echo "To run this script you must be the root user or use sudo."
+		echo -e "Exiting program\n"
+		exit 0
+	else
+		echo -e "You are root!\n"
+
+	fi
+	
+	# Check if the package manager apt is on the system
+	if command -v apt &>/dev/null; then
+		echo -e "The apt package manager is available on this system\n"
+	
+	else
+		echo "The system doesn't have the apt package manager available"
+		echo "This program requires the use of the apt package manager"
+		echo -e "Exiting program\n"
+		exit 0
+	fi
+}
+
 while true; do
+	# Checks if the user is root and has the apt package manager available before continuing with the program. If the user doesn't have either of those when running the program, the script exits the program.
+	initCheck()
+	
 	# Displays the option menu for the user to decide which music packages they want installed and takes their choice/action and runs in through the case options.
 	menu()
   read -p "Enter your choice [1-3]: \n" opt
