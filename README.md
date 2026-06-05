@@ -48,6 +48,8 @@ To utilize my customized `.bashrc` file located within this repository, follow t
 | :------------ | :-------------------: | :-----------: | :-------------------: |
 | Remove or fix invalid plugins in `.vimrc` file | April 28, 2025 | Yes | April 28, 2025 |
 | Create a README.md for vimscript.sh | April 28, 2025 | Yes | April 28, 2025 |
+| Check that symlink.sh works | June 4, 2026 | Yes | June 5, 2026 |
+
 
 
 ## Future Goals/Improvements
