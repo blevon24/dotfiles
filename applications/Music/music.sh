@@ -8,11 +8,12 @@ menu() {
   echo "3) Quit (exits the program)"
 }
 
-initCheck() {
-	if [ "$EUID" -ne 0 ]; then
-		echo "To run this script you must be the root user or use sudo."
-		echo -e "Exiting program\n"
-		exit 0
+initSetup() {
+	# Checks if user is not root and switches users to root if statement is true
+	if [ "$(whoami)" != "root" ]
+	then
+		sudo su -s "$0"
+		echo "User switched to root"
 	else
 		echo -e "You are root!\n"
 
@@ -28,33 +29,38 @@ initCheck() {
 		echo -e "Exiting program\n"
 		exit 0
 	fi
+
+	echo "
+	sudo apt-get update && sudo apt-get upgrade -y
+	echo "
 }
 
 while true; do
-	# Checks if the user is root and has the apt package manager available before continuing with the program. If the user doesn't have either of those when running the program, the script exits the program.
-	initCheck()
+	# Checks if the user is root and has the apt package manager available before continuing with the program. If the user doesn't have either of those when running the program, the script will change the user to root.
+	initSetup()
 	
 	# Displays the option menu for the user to decide which music packages they want installed and takes their choice/action and runs in through the case options.
 	menu()
-  read -p "Enter your choice [1-3]: \n" opt
+  	read -p "Enter your choice [1-3]: \n" opt
   
-  case "$opt" in
-      1)
-          sudo apt install cmus
-          echo "Package installation completed!"
-          ;;
-      2)
-          clear
-          menu()
-          ;;
-      3)
-          exit 0
-          ;;
-      *)
-          echo "Invalid option. Try Again."
-          ;;
-  esac
+  	case "$opt" in
+      	1)
+          	sudo apt install cmus
+          	echo "Package installation completed!"
+          	;;
+      	2)
+          	clear
+          	menu()
+          	;;
+     	3)
+          	exit 0
+          	;;
+      	*)
+          	echo "Invalid option. Try Again."
+          	;;
+  	esac
 done
+exit
 
   '''
 	if [[ $confirm == "y" || $confirm == "Y" ]]; then
@@ -124,5 +130,3 @@ done
 	fi
 done	
 '''
-
-exit
