@@ -41,7 +41,7 @@ Aliases Created:
  - `alias gitlg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"`- Shows a repositories log data, such as a commit's ID and message, how long ago a commit was made, and the user how made the commit, neatly displayed in a list/graph format
  - `alias web='cd /var/www/html'`- Changes directories to the /var/www/html directory where website files are stored
  - `alias reboot='sudo shutdown -r now'`- Safely reboots the system the user is on
- - `alias update='sudo apt update && sudo apt upgrade'`- Downloads/updates package information from all configured sources & upgrades packages currently installed to their newest versions
+ - `alias update='sudo apt update && sudo apt upgrade -y'`- Downloads/updates package information from all configured sources & upgrades the packages that can be upgraded to their newest versions
  - `alias l.='ls -d .* --color=auto'` - Displays and highlights hidden files within the current directory
  - `alias ..='cd ..'` - Moves to the parent directory of the current directory
  - `alias ...='cd ../../../'` - Moves up three directories of the current directory
@@ -61,6 +61,8 @@ Aliases Created:
  - `alias wifipass='nmcli dev wifi show-password'` - Outputs the wifi password for the network the device is on and displays a QR code of the password
  - `alias ddg='w3m lite.duckduckgo.com'` - Displays the light version of DuckDuckGo in the terminal for quick web searches
  - `alias itch.in='flatpak run io.itch.itch'`- Runs Itch.io application via Flatpak
+ - `alias autoremove='sudo apt autoremove -y'` - Removes unnecessary packages and dependencies for good memory management
+ - `alias clean='sudo apt clean -y'` - Cleans up package cache
 
 ## Script File Description
 The Bash Script file `symlink.sh` automatically creates symlinks between the *.bashrc* and *.bash_aliases* files in this Git repo folder and their counterpart files in the user's home directory. 
