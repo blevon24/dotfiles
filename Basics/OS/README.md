@@ -1,7 +1,7 @@
-# OS/Git Basics
-This directory is a collection folder on everything from basic commands to anything interesting I find out about related to Git or OS like Windows, Linux, MacOs, Android, etc.
+# Linux Basics
+This directory is a collection folder on everything from basic commands to anything interesting I find out about related to Linux OS.
 
-## Linux
+## Linux Commands
 
 ### Resources
  - Source: Software Carpentry
@@ -11,36 +11,4 @@ This directory is a collection folder on everything from basic commands to anyth
  - Source: 
     - Link: 
     - Desc:
-      
-## Windows
-
-### Resources
- - Source: 
-    - Link: 
-    - Desc: 
-
- - Source: 
-    - Link: 
-    - Desc:
-      
-## MacOS
-
-### Resources
- - Source: 
-    - Link: 
-    - Desc:
-
- - Source: 
-    - Link: 
-    - Desc:
-      
-## Android
-
-### Resources
- - Source: 
-    - Link: 
-    - Desc:
-  
- - Source: 
-    - Link: 
-    - Desc: 
+ 
