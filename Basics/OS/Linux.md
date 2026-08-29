@@ -12,3 +12,9 @@ This directory is a collection folder on everything from basic commands to anyth
     - Link: 
     - Desc:
  
+## Linux Files
+
+### User & Group
+ - **/etc/passwd**:
+ - **/etc/shadow**:
+ - **/etc/group**:
