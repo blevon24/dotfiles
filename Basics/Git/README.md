@@ -3,45 +3,39 @@
 ## Command Line Git
 (**NOTE:** The curly braces in the command examples below are just placeholders, for formatting use, to indicate where the user should enter a filename or whatever is stated within the braces. Therefore, the curly braces shouldn't be included when the command is used/typed into a command line.)
 
- - status
-   - **Definition:** Displays the state of the working directory and the staging area. This includes listing these types of files:
+ - **status:** Displays the state of the working directory and the staging area. This includes listing these types of files:
      - Unstaged files
      - Staged files
      - Files that aren't being tracked by Git
    - **Example:** `git status`
 
- - log
-   - **Definition:** Displays all the commit history of a repository. This includes showing each commit's:
+ - **log:** Displays all the commit history of a repository. This includes showing each commit's:
      - ID
      - Author/Creator
      - Date the commit was made
      - Commit message
     - **Example:** `git log` 
 
- - clone
-   - **Definition:** Creates a copy of an existing Git remote repository. This includes copying all existing data from the repository's:
+ - **clone:** Creates a copy of an existing Git remote repository. This includes copying all existing data from the repository's:
      - Folder/directories
      - Files
      - Branches
      - Entire repository history
    - **Example:** `git clone {Repository's SSH or HTTPS URL}`
   
- - add
-   - **Definition:** Adds changes in your working directory to the staging area. Can stage a single file or multiple files at a time. Ways to add multiple files at once:
+ - **add:** Adds changes in your working directory to the staging area. Can stage a single file or multiple files at a time. Ways to add multiple files at once:
      - Enter multiple files after `git add` instead of entering only one file
      - Enter a `.` after `git add` to stage new and modified files without deleting
      - Use the flag `-a` to stage all files
      - Use the flag `-u` to state modified and deleted files
    - **Example:** `git add {filename/directory}`
      
- - rm
-   - **Definition:** Removes one or more files from a repository's working tree, staging area, and Git index. 
+ - **rm:** Removes one or more files from a repository's working tree, staging area, and Git index. 
    - **Examples:**
      - `git rm {filename}`: removes a file from both Git tracking and the workspace
      - `git rm --cached {filename}`: only removes a file from Git tracking
  
- - commit
-   - **Definition:** Takes a snapshot of a local repository's currently staged changes/files.  
+ - **commit:** Takes a snapshot of a local repository's currently staged changes/files.  
    - **Examples:**
      - `git commit`: just commits and then the user will be prompted with text on their terminal to enter a message for the commit
      - `git commit -m "{text}"`: commits and add a message all in one
@@ -78,16 +72,13 @@ Date:   Fri Jan 31 15:42:42 2025 -0500
 
     Added a few resources and new commands
 ```
- - push
-   - **Definition:** Transfers committed files from a local repository to a remote Git repository 
+ - **push:** Transfers committed files from a local repository to a remote Git repository 
    - **Example:** `git push`
  
- - fetch
-   - **Definition:** Downloads commits, files, and refs from a remote Git repository to a local repository. However, unlike `git pull` it doesn't merge the fetched changes into the current local branches.
+ - **fetch:** Downloads commits, files, and refs from a remote Git repository to a local repository. However, unlike `git pull` it doesn't merge the fetched changes into the current local branches.
    - **Example:** `git fetch`
      
- - merge
-   - **Definition:** Combines changes from one or more branches into the current branch in a repository
+ - **merge:** Combines changes from one or more branches into the current branch in a repository
    - **Example:** `git merge {branch name}`
    - **Merge DEMO:**
 ```
@@ -123,12 +114,10 @@ Date:   Fri Jan 31 22:10:41 2025 -0500
     Merge branch 'test'
 ```
   
- - pull
-   - **Definition:** Incorporated changes from a remote repository into the current branch of the local repository. Automatically merges the downloaded changes so the local repository will be exactly like the remote repository.
+ - **pull:** Incorporated changes from a remote repository into the current branch of the local repository. Automatically merges the downloaded changes so the local repository will be exactly like the remote repository.
    - **Example:** `git pull`
 
- - branch
-   - **Definition:** Creates, lists, renames, or deletes branches.
+ - **branch:** Creates, lists, renames, or deletes branches.
    - **Example:** `git branch`
    - **Branch DEMO:**
 ```
@@ -146,25 +135,20 @@ blevon24@DESKTOP-Q2GG276:~/ceg3120s25-blevon24$ ls
 basics-guide  modules  unmerged
 
 ```
- - tag
-   - **Definition:** Creates, lists, deletes, or verifies a tag object. Tags are ref's that point to specific points in Git history.
+ - **tag:** Creates, lists, deletes, or verifies a tag object. Tags are ref's that point to specific points in Git history.
    - **Example:** `git tag`
      
- - checkout
-   - **Definition:** Switches current branch or restores working tree files. This command can restore working tree files by switching to a previous commit, branch, or tag, which in turn overwrites the working tree with the contents of the commit, branch, or tag you switched to so any deleted data is restored. 
+ - **checkout:** Switches current branch or restores working tree files. This command can restore working tree files by switching to a previous commit, branch, or tag, which in turn overwrites the working tree with the contents of the commit, branch, or tag you switched to so any deleted data is restored. 
    - **Example:** `git checkout {branch name}`
      
- - init
-   - **Definition:** Creates a new empty Git repository in a local terminal
+ - **init:** Creates a new empty Git repository in a local terminal
    - **Example:** `git init`
      
- - remote
-   - **Definition:** Creates, views, and deletes connections to other repositories 
+ - **remote:** Creates, views, and deletes connections to other repositories 
    - **Example:** `git remote`
 
 ## Git Files & Folders
- - .git folder
-   - **Description:** A hidden directory that holds all the information that Git needs to track changes to your codebase, branches, history, and more repository information. Contains files and other directories such as:
+ - **.git folder:** A hidden directory that holds all the information that Git needs to track changes to your codebase, branches, history, and more repository information. Contains files and other directories such as:
      - *HEAD file:* a text file is used to keep track of a repository's current branch
      - *refs folder:* stores references to a repository's commits and branches
      - *objects folder:* stores your codebase as a series of snapshots
@@ -173,8 +157,7 @@ basics-guide  modules  unmerged
      - *index file:* a binary file that stores a sorted list of file names along with file metadata and pointers to the object database
    - **Usage:** This folder is used to track the history of a repository
       
- - .gitignore file 
-   - **Description:** A text file that ignores files and directories in a Git repository by entering the name of a file the user wants Git to ignore. After the user enters the filename into .gitignore and commits .gitignore to the remote repository the contents listed in .gitignore are ignored.
+ - **.gitignore file:** A text file that ignores files and directories in a Git repository by entering the name of a file the user wants Git to ignore. After the user enters the filename into .gitignore and commits .gitignore to the remote repository the contents listed in .gitignore are ignored.
    - **Usage:** This file is used to ignore files and folders the user doesn't want to appear or be tracked by Git in the repository, which helps keep the repo clean and organized.
    - **.gitignore File Contents:**
 ```
@@ -187,9 +170,13 @@ modules
 ``` 
 
 ## GitHub Features
- - Pull Requests
-   - **Definition:** Is a proposal to merge a set of changes from one branch into another. Can display the differences between content in the source branch and the target branch.
-   - **How to perform one:**
+ - **Make a Directory:**
+   - **Directions:**
+     1. Go to the main page of the repository you want to make a directory in
+     2. Click on the three dots stating `More Options` and select `Create new file`
+     3. Enter the name for the new directory with a '/' at the end
+ - **Pull Requests:** Is a proposal to merge a set of changes from one branch into another. Can display the differences between content in the source branch and the target branch.
+   - **Directions:**
      1. Go to the main page of the repository you want to make a pull request for
      2. Go to the branch menu and select the branch that contains the local commits you want to pull from GitHub
      3. Click `Compare & pull request` to create a pull request for the branch you want to pull from
@@ -259,3 +246,6 @@ Lists the websites I used with a link to each respective website and an explanat
 - GitHub
   - Link: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request
   - I used this website to understand how push requests work and how to create/perform one  
+- TutorialPedia
+  - Link: https://www.tutorialpedia.org/blog/how-do-i-create-a-folder-in-a-github-repository/
+  - I used this website to understand how to create a new directory in GitHub
