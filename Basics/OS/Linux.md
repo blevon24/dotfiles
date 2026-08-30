@@ -4,17 +4,25 @@ This directory is a collection folder on everything from basic commands to anyth
 ## Linux Commands
 
 ### Resources
- - Source: Software Carpentry
+ - Software Carpentry
     - Link: https://swcarpentry.github.io/shell-novice/reference.html
     - Desc: A summary of basic commands and the overall filesystem of the Unix
 
- - Source: 
+ -  
     - Link: 
     - Desc:
  
-## Linux Files
+## Linux Filesystem Hierarchy
+The following is an overview of a standard Unix filesystem. The exact hierarchy depends on the platform so your file/directory structure may differ slightly:
 
-### User & Group
+
+
+### Bin Directory
+ - **/bin:**
+ - **/bin/bash:**
+ - 
+
+### 
  - **/etc/passwd**:
  - **/etc/shadow**:
  - **/etc/group**:
