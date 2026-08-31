@@ -61,13 +61,23 @@ Stores all the Linux device files. Includes terminal devices, USB, or any device
 #### What are Device Files?
  - Are special files that act as interfaces between hardware and software
  - Two Types:
-   - **Block Devices (external drives):** store data in fixed-size blocks and support random access - you can read or write any block directly. It's file type is represented as a 'b'.
+   - **Block Devices (external drives):** store data in fixed-size blocks and support random access - you can read or write any block directly. It's file type is represented by a 'b'.
      - Hard Drives: /dev/sda, /dev/sdb (SATA)
      - NVMe SSDs: /dev/nvme0n1, /dev/nvme1n1
      - Partitions: /dev/sda1, /dev/nvme0n1p1
      - Virtual Disks: /dev/vda (in VMs)
      - Loop Devices: /dev/loop0 (mount ISO files)
-   - **Character Devices:**
+   - **Character Devices (Ex: microphones, speakers):** provide a stream of bytes, accessed sequentially (no seeking back). It's file type is represented by a 'c'.
+     - `/dev/null`: discards anything written. Reads return EOF.
+     - `/dev/zero`: reads return infinite null bytes
+     - `/dev/random`, `/dev/urandom`: random bytes from kernel entropy pool
+     - `/dev/tty`: your controlling terminal
+     - `/dev/pts/0`: Pseudo-terminal (SSH sessions, terminal emulators)
+     - `/dev/input/event0`: keyboard or mouse input devices
+ - Major vs Minor Numbers
+   - Major
+   - Minor
+   -  
 </details>
 
 <details>
@@ -133,8 +143,8 @@ Is the home directory for the root user/superuser account, where its configurati
     - Desc: A summary of basic commands and the overall filesystem of the Unix
 
  - GeeksforGeeks
-    - Link: https://www.geeksforgeeks.org/linux-unix/linux-file-system/
-    - Desc: An extensive guide on the Linux File System including its characteristics, types/implementations, and advanced features
+    - Link: https://www.geeksforgeeks.org/linux-unix/linux-tutorial/
+    - Desc: An extensive guide on Linux 
 
  - LinuxVox
     - Link:https://linuxvox.com/blog/the-toplevel-directory-on-a-linux-system-is-represented-as/
@@ -148,3 +158,6 @@ Is the home directory for the root user/superuser account, where its configurati
     - Link: https://linuxvox.com/blog/bin-folder-linux/
     - Desc: A summary of the `/bin` folder in Linux and how to add custom binaries
  
+ - TuteWorld
+   - Link: https://www.tuteworld.com/linux/storage/block-vs-character-devices/
+   - Desc: Explains what Block and Character devices are and their differences
