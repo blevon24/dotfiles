@@ -8,7 +8,7 @@ The following is an overview of a standard Unix filesystem. The exact hierarchy 
 
 ### Directory & File Breakdown
 <details>
-<summary>`/` Root Directory</summary>
+<summary>`/` Root Dir</summary>
 
 #### Definition
 Is the top-level directory of the entire Linux file system. Where all other directories and files are organized and structured.
@@ -20,7 +20,7 @@ Is the top-level directory of the entire Linux file system. Where all other dire
 </details>
 
 <details>
-<summary>`/bin` Binary Directory</summary>
+<summary>`/bin` Binary Dir</summary>
 
 #### Definition
 Contains essential binary executable files (commands) that are required for the basic operation of the system.
@@ -39,7 +39,7 @@ Generally not recommended to create custom system-wide binaries as it can lead t
 </details>
 
 <details>
-<summary>`/boot` Boot Directory</summary>
+<summary>`/boot` Boot Dir</summary>
 
 #### Definition
 Stores all files required for booting the system.
@@ -53,7 +53,7 @@ Stores all files required for booting the system.
 </details>
 
 <details>
-<summary>`/dev` Device Directory</summary>
+<summary>`/dev` Device Dir</summary>
 
 #### Definition
 Stores all the Linux device files. Includes terminal devices, USB, or any device attached to the system.
@@ -81,10 +81,11 @@ Stores all the Linux device files. Includes terminal devices, USB, or any device
 </details>
 
 <details>
-<summary>`/etc` </summary>
+<summary>`/etc` Editable Text Configuration Dir</summary>
 
 #### Definition
-Holds system-wide configuration files.
+Contains configuration files for system applications, users, services, and tools or it contains the Host-specific system-wide configuration files.
+ - Also contains startup and shutdown shell scripts used to start/stop individual programs
 
  - **/etc/passwd:** stores user account information
  - **/etc/shadow:**
@@ -93,14 +94,67 @@ Holds system-wide configuration files.
 </details>
 
 <details>
-<summary>`/home` </summary>
+<summary>`/home` User Homes Dir</summary>
 
 #### Definition
 Is where user home directories are located, which each user having their own subdirectory under `/home`.
 </details>
 
 <details>
-<summary>`/root` Root User's Home Directory</summary>
+<summary>`/lib` Libraries Dir</summary>
+
+#### Definition
+Stores shared libraries needed by applications to run.
+
+#### Characteristics
+ - Includes dynamic libraries needed during runtime
+ - Apache server libraries are available here
+ - Library filenames are either ld* or lib*.so.*
+ - **Ex:**
+   - ld-2.11.1.so
+   - libncurses.so.5.7 
+</details>
+
+<details>
+<summary>`/media` Media Dir</summary>
+
+#### Definition
+Where devices like USBs, CDs, and pen drives are mounted.
+
+#### Characteristics
+ - Acts as a temporary mount directory for removable devices
+ - **Ex:**
+   - `/media/cdrom` for CD-rOM
+   - `/media/floppy` for floppy drives
+   - `/media/cdrecorder` for CD writer 
+</details>
+
+<details>
+<summary>`/mnt` Mount Dir</summary>
+
+#### Definition
+Where external drives are temporarily mounted and there contents become accessible/connected to the system.
+
+#### Characteristics
+ - System admins can mount filesystems here
+</details>
+
+<details>
+<summary>`/opt` Optional Software Packages Dir</summary>
+
+#### Definition
+Stores third-party software and packages that are not part of the default system installation.
+
+#### Characteristics
+ - Includes the software and packages configuration and data files
+ - Contains add-on applications from individual vendors
+ - 
+
+
+</details>
+
+<details>
+<summary>`/root` Root User's Home Dir</summary>
 
 #### Definition
 Is the home directory for the root user/superuser account, where its configuration and personal files are stored.
