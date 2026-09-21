@@ -1,7 +1,7 @@
 # Music Services/Platforms Installation
 ## Service Applications Guide
  - **cmus:** is a small, fast, and powerful terminal-based audio player for Unix OS, which supports most major audio formats. Includes various features such as gapless playback, ReplayGain support, MP3 and Ogg streaming, live filtering, instant startup, customizable key-bingings, and vi-style default key-bingings.
- - 
+ - **Spotify:**
 
 ## How to install these applications
 There are two methods to create aliases, which are listed below. I used the first method on this assignment.
