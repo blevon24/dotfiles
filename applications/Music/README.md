@@ -50,13 +50,17 @@ How It Works:
  4. The script is built with a safety net in mind so if the user mistypes or doesn't answer with 'y' or 'n', then the script will prompt them again with either of the questions above (1 and 3) to allow the user to answer correctly rather than exit the program and force the user to run it again.
 
 ## References
- - Source: C* Music Player
+ - C* Music Player
    - Link: https://cmus.github.io/#home
    - Used for: I used this website to define what cmus is and how to install it
 
- - Source: ArchWiki
+ - ArchWiki
    - Link: https://wiki.archlinux.org/title/Cmus
    - Used for: I used this website to understand what features cmus has and how to use them such as remote controlling cmus via an external application or key-binding
+
+ - Linux Capable
+   - Link: https://linuxcapable.com/how-to-install-spotify-on-ubuntu-linux/
+   - Used for: provided instructions on how to install Spotify onto a Ubuntu system 
   
  - Source: Keno Kivabe
    - Link: https://blogs.kenokivabe.com/article/create-interactive-menus-in-bash
